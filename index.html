@@ -11,7 +11,7 @@
     <link rel="canonical" href="https://www.thehireroomco.com.au/">
 
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -112,10 +112,11 @@
         }
         .hero-image { 
             width: 100%; 
-            height: 800px; /* Default height to match previous carousel */
+            height: 1000px; /* Increased height for desktop */
             object-fit: cover; 
             object-position: center; 
             transition: transform 0.3s ease; 
+            display: block; /* Ensures no extra space below the image */
         }
         .hero-image:hover { 
             transform: scale(1.05); 
@@ -140,7 +141,7 @@
             .callout h5 { font-size: 24px; } /* Consistent with other pages */
             .col-sm-6 { width: 100%; }
             .hero-image { 
-                height: 300px; /* Adjusted for tablet */
+                height: 500px; /* Increased height for tablet */
             }
             .img-responsive { 
                 height: 250px; 
@@ -153,7 +154,7 @@
             .header-title { font-size: 28px; }
             .callout h5 { font-size: 20px; } /* Consistent with other pages */
             .hero-image { 
-                height: 200px; /* Adjusted for mobile */
+                height: 300px; /* Increased height for mobile */
             }
             .img-responsive { 
                 height: 200px; 
@@ -163,7 +164,7 @@
         }
         @media (min-width: 769px) {
             .hero-image { 
-                height: 800px; /* Consistent height */
+                height: 1000px; /* Consistent height */
             }
             article h1 { font-size: 28px; }
         }
@@ -205,7 +206,7 @@
         <main>
             <div>
                 <div>
-                    <img src="Softplay1.jpg" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-t-sm mg-b-lg" />
+                    <img src="Softplay1.jpg" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" /> <!-- Removed mg-t-sm -->
                 </div>
             </div>
             <div class="container">

@@ -58,9 +58,9 @@
             top: 0; 
             width: 100%; 
             z-index: 1000; 
-            padding: 10px 15px 50px 15px; /* Matches your last update */
+            padding: 10px 15px 50px 15px; /* Matches index.html */
             transition: background 0.3s; 
-            height: 60px; /* Matches your last update */
+            height: 80px; /* Matches index.html */
         }
         .header-nav { 
             float: right; 
@@ -71,10 +71,10 @@
             left: 50%; 
             transform: translateX(-50%); 
             font-family: 'Great Vibes', cursive; 
-            font-size: 54px; 
-            color: black; 
+            font-size: 60px; /* Matches index.html */
+            color: white; /* Matches index.html */
             margin: 0; 
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95); /* Matches index.html */
             text-decoration: none; 
             display: inline-block; 
             padding: 5px 15px; 
@@ -82,7 +82,7 @@
             line-height: 1; 
         }
         .header-title:hover { 
-            color: #666; 
+            color: #ccc; /* Matches index.html */
         }
         .dropdown-toggle { 
             background: none; 
@@ -91,8 +91,8 @@
         }
         .hamburger { 
             font-size: 28px; 
-            color: black; 
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); 
+            color: white; /* Matches index.html */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.95); /* Matches index.html */
             cursor: pointer; 
         }
         .dropdown-menu { 
@@ -132,25 +132,36 @@
         .service-item .button:hover { 
             background: #555; 
         }
+        main { 
+            margin-top: 100px; /* Move text away from header */
+        }
         @media (max-width: 768px) {
             .container { padding: 10px; }
-            .header-title { font-size: 36px; }
+            .header-title { font-size: 40px; } /* Matches index.html */
             .callout h5 { font-size: 24px; }
             .col-sm-6 { width: 100%; }
             .service-item h3 { font-size: 20px; }
             .service-item p { font-size: 14px; }
             header { 
                 padding: 10px 15px 50px 15px; 
-                height: 60px; 
+                height: 80px; /* Matches index.html */
+            }
+            .hamburger { font-size: 24px; } /* Matches index.html */
+            main { 
+                margin-top: 80px; /* Adjusted for tablet */
             }
         }
         @media (max-width: 480px) {
-            .header-title { font-size: 28px; }
+            .header-title { font-size: 30px; } /* Matches index.html */
             .callout h5 { font-size: 20px; }
             .service-item h3 { font-size: 18px; }
             .service-item p { font-size: 12px; }
             header { 
                 padding: 10px 15px 50px 15px; 
+            }
+            .hamburger { font-size: 20px; } /* Matches index.html */
+            main { 
+                margin-top: 60px; /* Adjusted for mobile */
             }
         }
     </style>

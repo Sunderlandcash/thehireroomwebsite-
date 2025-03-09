@@ -58,7 +58,7 @@
             top: 0; 
             width: 100%; 
             z-index: 1000; 
-            padding: 10px 15px 20px 15px;
+            padding: 10px 15px 35px 15px; /* Bottom padding changed to 35px */
             transition: background 0.3s; 
             height: 60px;
         }
@@ -117,16 +117,16 @@
             border: 2px solid black; 
             overflow: hidden; 
             position: relative;
-            height: 800px; /* Fixed height for consistency */
+            height: 800px;
         }
         .flexslider .slides { 
-            height: 100%; /* Ensure slides fill the container */
+            height: 100%;
         }
         .flexslider .slides img { 
             width: 100%; 
-            height: 800px; /* Match carousel height */
+            height: 800px; 
             object-fit: cover; 
-            object-position: center; /* Focus on center */
+            object-position: center;
         }
         .img-responsive { 
             transition: transform 0.3s ease; 
@@ -149,16 +149,19 @@
             .callout h6 { font-size: 14px; }
             .col-sm-6 { width: 100%; }
             .flexslider { 
-                height: 300px; /* Adjusted for tablet */
+                height: 300px;
             }
             .flexslider .slides img { 
-                height: 300px; /* Match carousel height */
+                height: 300px;
             }
             .img-responsive { 
-                height: 250px; 
+                height: 250px;
             }
             footer { padding: 20px 10px; }
-            header { padding: 10px 15px 20px 15px; height: 60px; }
+            header { 
+                padding: 10px 15px 35px 15px; /* Bottom padding updated */
+                height: 60px; 
+            }
             article h1 { font-size: 20px; }
         }
         @media (max-width: 480px) {
@@ -166,20 +169,22 @@
             .callout h5 { font-size: 16px; }
             .callout h6 { font-size: 12px; }
             .flexslider { 
-                height: 200px; /* Adjusted for mobile */
+                height: 300px; /* Changed from 200px to 300px */
             }
             .flexslider .slides img { 
-                height: 200px; /* Match carousel height */
+                height: 300px; /* Changed from 200px to 300px */
             }
             .img-responsive { 
-                height: 200px; 
+                height: 200px;
             }
             article h1 { font-size: 18px; }
-            header { padding: 10px 15px 20px 15px; }
+            header { 
+                padding: 10px 15px 35px 15px; /* Bottom padding updated */
+            }
         }
         @media (min-width: 769px) {
             .flexslider { 
-                height: 800px; /* Consistent height */
+                height: 800px;
             }
             .flexslider .slides img { 
                 height: 800px; 

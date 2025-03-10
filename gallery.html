@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery - The Hire Room Co.</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="the hire room co, event hire, soft play, jumping castles, balloon garlands, lara victoria, gallery">
+    <meta name="description" content="Explore the gallery of The Hire Room Co., showcasing event hire setups including soft play, jumping castles, and balloon garlands in Lara, Victoria.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="alternate" href="https://www.thehireroom.com.au/gallery.html" hreflang="en-au" />
+    <link rel="canonical" href="https://www.thehireroom.com.au/gallery.html">
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: white; 
+            color: black; 
+            text-align: center; 
+            overflow-x: hidden; 
+        }
+        .container { 
+            width: 100%; 
+            max-width: 1170px; 
+            margin: 0 auto; 
+            padding: 15px; 
+        }
+        .mg-t-sm { margin-top: 20px; }
+        .mg-b-lg { margin-bottom: 40px; }
+        .mg-b-md { margin-bottom: 30px; }
+        .mg-t-lg { margin-top: 40px; }
+        .callout h5 { 
+            font-size: 36px; 
+            margin: 0; 
+        }
+        .row { margin-left: -15px; margin-right: -15px; }
+        .col-xs-12, .col-sm-6, .col-md-4 { float: left; padding: 15px; }
+        .col-xs-12 { width: 100%; }
+        .col-sm-6 { width: 50%; }
+        .col-md-4 { width: 33.33%; }
+        .clearfix { clear: both; }
+        .button { display: inline-block; padding: 10px 20px; background: #333; color: #fff; text-decoration: none; }
+        .button:hover { background: #555; }
+        footer { 
+            background: white; 
+            padding: 30px 20px; 
+            color: black; 
+        }
+        header { 
+            background: transparent; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000; 
+            padding: 10px 15px 50px 15px; 
+            transition: background 0.3s; 
+            height: 80px; 
+        }
+        .header-nav { 
+            float: right; 
+            position: relative; 
+        }
+        .header-title { 
+            position: absolute; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            font-family: 'Great Vibes', cursive; 
+            font-size: 60px; 
+            color: white; 
+            margin: 0; 
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95); 
+            text-decoration: none; 
+            display: inline-block; 
+            padding: 5px 15px; 
+            transition: color 0.3s ease; 
+            line-height: 1; 
+        }
+        .header-title:hover { 
+            color: #ccc; 
+        }
+        .dropdown-toggle { 
+            background: none; 
+            border: none; 
+            padding: 10px; 
+        }
+        .hamburger { 
+            font-size: 28px; 
+            color: white; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.95); 
+            cursor: pointer; 
+        }
+        .dropdown-menu { 
+            background: white; 
+            position: absolute; 
+            right: 0; 
+            left: auto; 
+            margin-top: 0; 
+            border: none; 
+        }
+        .dropdown-menu a { 
+            color: black !important; 
+        }
+        .dropdown-menu a:hover { 
+            background: #ddd; 
+            color: black !important; 
+        }
+        .gallery-item { 
+            text-align: center; 
+            position: relative; 
+        }
+        .gallery-item img { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            transition: transform 0.3s ease; 
+            cursor: pointer; 
+        }
+        .gallery-item img:hover { 
+            transform: scale(1.05); 
+        }
+        .gallery-item h3 { 
+            font-size: 20px; 
+            margin: 10px 0; 
+        }
+        .gallery-item p { 
+            font-size: 14px; 
+            color: #666; 
+        }
+        #image-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+        #expanded-image {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        main { 
+            margin-top: 100px; 
+        }
+        footer .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer .social-icons .fa-facebook-f {
+            color: #3b5998; 
+        }
+        footer .social-icons .fa-instagram {
+            background: linear-gradient(45deg, #f09433, #e1306c, #c13584); 
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        footer .social-icons a:hover {
+            opacity: 0.8;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .header-title { font-size: 40px; }
+            .callout h5 { font-size: 24px; }
+            .col-sm-6, .col-md-4 { width: 100%; }
+            .gallery-item img { height: 250px; }
+            .gallery-item h3 { font-size: 18px; }
+            .gallery-item p { font-size: 12px; }
+            #expanded-image { max-width: 95%; max-height: 80vh; }
+            header { 
+                padding: 10px 15px 50px 15px; 
+                height: 80px; 
+            }
+            .hamburger { font-size: 24px; }
+            main { 
+                margin-top: 80px; 
+            }
+            footer .social-icons a { font-size: 16px; }
+        }
+        @media (max-width: 480px) {
+            .header-title { font-size: 30px; }
+            .callout h5 { font-size: 20px; }
+            .gallery-item img { height: 200px; }
+            .gallery-item h3 { font-size: 16px; }
+            .gallery-item p { font-size: 12px; }
+            #expanded-image { max-width: 95%; max-height: 70vh; }
+            header { 
+                padding: 10px 15px 50px 15px; 
+            }
+            .hamburger { font-size: 20px; }
+            main { 
+                margin-top: 60px; 
+            }
+            footer .social-icons a { font-size: 14px; }
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('header').css('background', 'transparent');
+            $(window).on('scroll', function() {
+                var st = $(this).scrollTop();
+                if (st <= 0) {
+                    $('header').css('background', 'transparent');
+                } else {
+                    $('header').css('background', 'white');
+                }
+            });
+            $(window).trigger('scroll');
+
+            const overlay = $('<div id="image-overlay"></div>').appendTo('body');
+            const expandedImage = $('<img id="expanded-image">').appendTo(overlay);
+
+            $('.gallery-item img').on('click', function() {
+                const src = $(this).attr('src');
+                const alt = $(this).attr('alt');
+                expandedImage.attr('src', src).attr('alt', alt);
+                overlay.fadeIn(300);
+                $('body').css('overflow', 'hidden');
+            });
+
+            overlay.on('click', function(e) {
+                if (e.target === this || e.target === expandedImage[0]) {
+                    overlay.fadeOut(300);
+                    $('body').css('overflow', 'auto');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="header-title">The Hire Room Co.</a>
+        <div class="header-nav">
+            <div class="dropdown">
+                <button class="dropdown-toggle hamburger" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    ☰
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div>
+        <main>
+            <div class="container mg-t-lg">
+                <div class="col-xs-12">
+                    <div class="callout mg-b-md">
+                        <h5>LET’S MAKE YOUR NEXT EVENT ONE TO REMEMBER!</h5>
+                    </div>
+                    <h1>Our Gallery</h1>
+                    <p>Discover a selection of our event hire setups, including soft play, jumping castles, and balloon garlands, crafted to make celebrations unforgettable in Lara, Victoria.</p>
+                </div>
+            </div>
+            <div class="container mg-b-lg">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Softplay1.jpg" alt="Soft Play Setup 1">
+                        <h3>Soft Play Setup 1</h3>
+                        <p>A colorful soft play area for a children’s birthday party in Lara.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Jumpingcastle1.jpg" alt="Jumping Castle 1">
+                        <h3>Jumping Castle 1</h3>
+                        <p>A vibrant jumping castle for a family event in Geelong.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Backdrop1.jpg" alt="Balloon Garland Backdrop">
+                        <h3>Balloon Garland Backdrop</h3>
+                        <p>An elegant balloon garland backdrop for a wedding in Ballarat.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Softplay2.jpg" alt="Soft Play Setup 2">
+                        <h3>Soft Play Setup 2</h3>
+                        <p>A themed soft play setup for a toddler’s party in Torquay.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Jumpingcastle2.jpg" alt="Jumping Castle 2">
+                        <h3>Jumping Castle 2</h3>
+                        <p>A large jumping castle for a community event in Lara.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Backdrop2.jpg" alt="Custom Event Backdrop">
+                        <h3>Custom Event Backdrop</h3>
+                        <p>A bespoke backdrop with balloon accents for a baby shower in Bendigo.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="col-xs-12">
+                © The Hire Room Co. 2025. All Rights Reserved.<br>
+                Email: <a href="mailto:thehireroomco@hotmail.com" style="color: black;">thehireroomco@hotmail.com</a> | Phone: <a href="tel:0406996944" style="color: black;">0406 996 944</a><br>
+                Address: Lara, Vic 3212
+                <div class="social-icons" style="margin-top: 10px;">
+                    <a href="https://www.facebook.com/share/18usdgeWSD/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/thehireroomco?igsh=MXIyeTYycXBidG1mNg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

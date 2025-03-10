@@ -7,11 +7,12 @@
     <meta name="keywords" content="the hire room co, event hire, soft play, jumping castles, balloon garlands, lara victoria, services">
     <meta name="description" content="Learn about the event hire services offered by The Hire Room Co., including soft play setups, jumping castles, and balloon garlands in Lara, Victoria.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="alternate" href="https://www.thehireroomco.com.au/services.html" hreflang="en-au" />
-    <link rel="canonical" href="https://www.thehireroomco.com.au/services.html">
+    <link rel="alternate" href="https://www.thehireroom.com.au/services.html" hreflang="en-au" />
+    <link rel="canonical" href="https://www.thehireroom.com.au/services.html">
 
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -28,7 +29,7 @@
         }
         .container { 
             width: 100%; 
-            max-width: 1170px; /* Matches your other pages */
+            max-width: 1170px; 
             margin: 0 auto; 
             padding: 15px; 
         }
@@ -58,9 +59,9 @@
             top: 0; 
             width: 100%; 
             z-index: 1000; 
-            padding: 10px 15px 50px 15px; /* Matches index.html */
+            padding: 10px 15px 50px 15px; 
             transition: background 0.3s; 
-            height: 80px; /* Matches index.html */
+            height: 80px; 
         }
         .header-nav { 
             float: right; 
@@ -71,10 +72,10 @@
             left: 50%; 
             transform: translateX(-50%); 
             font-family: 'Great Vibes', cursive; 
-            font-size: 60px; /* Matches index.html */
-            color: white; /* Matches index.html */
+            font-size: 60px; 
+            color: white; 
             margin: 0; 
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95); /* Matches index.html */
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95); 
             text-decoration: none; 
             display: inline-block; 
             padding: 5px 15px; 
@@ -82,7 +83,7 @@
             line-height: 1; 
         }
         .header-title:hover { 
-            color: #ccc; /* Matches index.html */
+            color: #ccc; 
         }
         .dropdown-toggle { 
             background: none; 
@@ -91,8 +92,8 @@
         }
         .hamburger { 
             font-size: 28px; 
-            color: white; /* Matches index.html */
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.95); /* Matches index.html */
+            color: white; 
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.95); 
             cursor: pointer; 
         }
         .dropdown-menu { 
@@ -113,7 +114,7 @@
         .service-item { 
             text-align: left; 
             padding: 20px; 
-            background: #f0f0f0; /* Light gray for contrast on white */
+            background: #f0f0f0; 
             margin-bottom: 20px; 
         }
         .service-item h3 { 
@@ -123,7 +124,7 @@
         }
         .service-item p { 
             font-size: 16px; 
-            color: #666; /* Slightly lighter for readability */
+            color: #666; 
             margin: 0 0 15px 0; 
         }
         .service-item .button { 
@@ -132,37 +133,56 @@
         .service-item .button:hover { 
             background: #555; 
         }
+        footer .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer .social-icons .fa-facebook-f {
+            color: #3b5998; 
+        }
+        footer .social-icons .fa-instagram {
+            background: linear-gradient(45deg, #f09433, #e1306c, #c13584); 
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        footer .social-icons a:hover {
+            opacity: 0.8;
+        }
         main { 
-            margin-top: 100px; /* Move text away from header */
+            margin-top: 100px; 
         }
         @media (max-width: 768px) {
             .container { padding: 10px; }
-            .header-title { font-size: 40px; } /* Matches index.html */
+            .header-title { font-size: 40px; }
             .callout h5 { font-size: 24px; }
             .col-sm-6 { width: 100%; }
             .service-item h3 { font-size: 20px; }
             .service-item p { font-size: 14px; }
             header { 
                 padding: 10px 15px 50px 15px; 
-                height: 80px; /* Matches index.html */
+                height: 80px; 
             }
-            .hamburger { font-size: 24px; } /* Matches index.html */
+            .hamburger { font-size: 24px; }
             main { 
-                margin-top: 80px; /* Adjusted for tablet */
+                margin-top: 80px; 
             }
+            footer .social-icons a { font-size: 16px; }
         }
         @media (max-width: 480px) {
-            .header-title { font-size: 30px; } /* Matches index.html */
+            .header-title { font-size: 30px; }
             .callout h5 { font-size: 20px; }
             .service-item h3 { font-size: 18px; }
             .service-item p { font-size: 12px; }
             header { 
                 padding: 10px 15px 50px 15px; 
             }
-            .hamburger { font-size: 20px; } /* Matches index.html */
+            .hamburger { font-size: 20px; }
             main { 
-                margin-top: 60px; /* Adjusted for mobile */
+                margin-top: 60px; 
             }
+            footer .social-icons a { font-size: 14px; }
         }
     </style>
 
@@ -191,8 +211,9 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="services.html">Services</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -264,6 +285,10 @@
                 © The Hire Room Co. 2025. All Rights Reserved.<br>
                 Email: <a href="mailto:thehireroomco@hotmail.com" style="color: black;">thehireroomco@hotmail.com</a> | Phone: <a href="tel:0406996944" style="color: black;">0406 996 944</a><br>
                 Address: Lara, Vic 3212
+                <div class="social-icons" style="margin-top: 10px;">
+                    <a href="https://www.facebook.com/share/18usdgeWSD/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/thehireroomco?igsh=MXIyeTYycXBidG1mNg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </footer>

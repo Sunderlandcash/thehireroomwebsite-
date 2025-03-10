@@ -264,7 +264,7 @@
             <div class="container">
                 <div class="col-xs-12">
                     <div class="contact-form">
-                        <form action="https://getform.io/f/adrnkyma" method="POST">
+                        <form id="contactForm" method="POST">
                             <input type="hidden" name="redirect_to" value="https://www.thehireroom.com.au/thankyou.html">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -308,5 +308,23 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#contactForm').on('submit', function(event) {
+                event.preventDefault();
+                $.ajax({
+                    url: 'https://thehireroomco.getform.com/xn5yw',
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        window.location.href = 'https://www.thehireroom.com.au/thankyou.html';
+                    },
+                    error: function(xhr, status, error) {
+                        alert('There was an error sending your message. Please try again.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

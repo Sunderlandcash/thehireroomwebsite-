@@ -71,7 +71,7 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            font-family: 'Great Vibes';
+            font-family: 'Great Vibes'; /* Mobile will use this unless overridden */
             font-size: 60px;
             color: white;
             margin: 0;
@@ -81,9 +81,6 @@
             padding: 5px 15px;
             transition: color 0.3s ease;
             line-height: 1;
-        }
-        a.header-title {
-            font-family: 'Great Vibes' !important; /* Increased specificity to override */
         }
         .header-title:hover { 
             color: #ccc; 
@@ -145,167 +142,4 @@
             text-decoration: none;
             transition: color 0.3s ease;
         }
-        footer .social-icons .fa-facebook-f {
-            color: #3b5998; 
-        }
-        footer .social-icons .fa-instagram {
-            background: linear-gradient(45deg, #f09433, #e1306c, #c13584); 
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        footer .social-icons a:hover {
-            opacity: 0.8;
-        }
-        @media (max-width: 768px) {
-            .container { padding: 10px; }
-            .header-title { font-size: 40px; }
-            .callout h5 { font-size: 24px; }
-            .col-sm-6 { width: 100%; }
-            .hero-image { 
-                height: 600px; 
-            }
-            .img-responsive { 
-                height: 350px; 
-            }
-            footer { padding: 20px 10px; }
-            header { padding: 10px 15px 50px 15px; height: 80px; }
-            .hamburger { font-size: 24px; }
-            footer .social-icons a { font-size: 16px; }
-            article h1 { font-size: 20px; }
-        }
-        @media (max-width: 480px) {
-            .header-title { font-size: 30px; }
-            .callout h5 { font-size: 20px; }
-            .hero-image { 
-                height: 400px; 
-            }
-            .img-responsive { 
-                height: 300px; 
-            }
-            article h1 { font-size: 18px; }
-            header { padding: 10px 15px 50px 15px; }
-            .hamburger { font-size: 20px; }
-            footer .social-icons a { font-size: 14px; }
-        }
-        @media (min-width: 769px) {
-            .hero-image { 
-                height: 1200px; 
-            }
-            .img-responsive { 
-                height: 400px; 
-            }
-            article h1 { font-size: 28px; }
-            .header-title {
-                font-family: 'Great Vibes' !important;
-                font-size: 60px;
-            }
-        }
-    </style>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('header').css('background', 'transparent');
-            $(window).on('scroll', function() {
-                var st = $(this).scrollTop();
-                if (st <= 0) {
-                    $('header').css('background', 'transparent');
-                } else {
-                    $('header').css('background', 'white');
-                }
-            });
-            $(window).trigger('scroll');
-        });
-    </script>
-</head>
-<body>
-    <header>
-        <a href="index.html" class="header-title">The Hire Room Co.</a>
-        <div class="header-nav">
-            <div class="dropdown">
-                <button class="dropdown-toggle hamburger" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    ☰
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    <div>
-        <main>
-            <div>
-                <div>
-                    <img src="Softplay1.jpg" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" />
-                </div>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 mg-b-md">
-                    <div class="callout mg-t-lg mg-b-lg">
-                        <h5>LET’S MAKE YOUR NEXT EVENT ONE TO REMEMBER!</h5>
-                    </div>
-                </div>
-                <div class="col-xs-12 mg-b-lg">
-                    <p>At The Hire Room Co, we specialize in transforming your celebrations with high-quality event hire. From soft play setups for little adventurers to thrilling jumping castles, elegant backdrops, cake stands, and stunning balloon garlands, we have everything to make your event unforgettable.</p>
-                    <p>Whether it’s a birthday, wedding, or any special occasion, we’re here to bring your vision to life—effortlessly and beautifully. Based in Lara, Victoria, we proudly serve clients with passion and precision to create magical moments.</p>
-                </div>
-            </div>
-            <div class="container">
-                <section>
-                    <div class="row">
-                        <article class="col-xs-12 col-sm-6">
-                            <div>
-                                <a href="gallery.html">
-                                    <img class="img-responsive" src="Softplay1.jpg" alt="Gallery - Soft Play Setup" />
-                                </a>
-                            </div>
-                            <div>
-                                <h1>GALLERY</h1>
-                            </div>
-                        </article>
-                        <article class="col-xs-12 col-sm-6">
-                            <div>
-                                <a href="services.html">
-                                    <img class="img-responsive" src="Softplay1.jpg" alt="Services - Elegant Backdrop" />
-                                </a>
-                            </div>
-                            <div>
-                                <h1>SERVICES</h1>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="row">
-                        <article class="col-xs-12 col-sm-6">
-                            <div>
-                                <a href="pricing.html">
-                                    <img class="img-responsive" src="custom.jpg" alt="Pricing - Custom Package" />
-                                </a>
-                            </div>
-                            <div>
-                                <h1>PRICING</h1>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="clearfix"></div>
-                </section>
-            </div>
-        </main>
-    </div>
-    <footer>
-        <div class="container">
-            <div class="col-xs-12">
-                © The Hire Room Co. 2025. All Rights Reserved.<br>
-                Email: <a href="mailto:thehireroomco@hotmail.com" style="color: black;">thehireroomco@hotmail.com</a> | Phone: <a href="tel:0406996944" style="color: black;">0406 996 944</a><br>
-                Address: Lara, Vic 3212
-                <div class="social-icons" style="margin-top: 10px;">
-                    <a href="https://www.facebook.com/people/thehireroomco/100090880473042/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/thehireroomco?igsh=MXIyeTYycXBidG1mNg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+        footer .social-icons 

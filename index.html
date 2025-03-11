@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The Hire Room Co.</title>
+    <title>Gallery - The Hire Room Co.</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="keywords" content="the hire room co, event hire, soft play, jumping castles, balloon garlands, lara victoria">
-    <meta name="description" content="The Hire Room Co. specializes in high-quality event hire, offering soft play setups, jumping castles, elegant backdrops, and balloon garlands for unforgettable celebrations in Lara, Victoria.">
+    <meta name="keywords" content="the hire room co, event hire, soft play, jumping castles, balloon garlands, lara victoria, gallery">
+    <meta name="description" content="Explore the gallery of The Hire Room Co., showcasing event hire setups including soft play, jumping castles, and balloon garlands in Lara, Victoria.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="alternate" href="https://www.thehireroom.com.au/" hreflang="en-au" />
-    <link rel="canonical" href="https://www.thehireroom.com.au/">
+    <link rel="alternate" href="https://www.thehireroom.com.au/gallery.html" hreflang="en-au" />
+    <link rel="canonical" href="https://www.thehireroom.com.au/gallery.html">
 
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
             background: white; 
             color: black; 
             text-align: center; 
-            overflow-x: hidden;
+            overflow-x: hidden; 
         }
         .container { 
             width: 100%; 
@@ -42,9 +42,10 @@
             margin: 0; 
         }
         .row { margin-left: -15px; margin-right: -15px; }
-        .col-xs-12, .col-sm-6 { float: left; padding: 15px; }
+        .col-xs-12, .col-sm-6, .col-md-4 { float: left; padding: 15px; }
         .col-xs-12 { width: 100%; }
         .col-sm-6 { width: 50%; }
+        .col-md-4 { width: 33.33%; }
         .clearfix { clear: both; }
         .button { display: inline-block; padding: 10px 20px; background: #333; color: #fff; text-decoration: none; }
         .button:hover { background: #555; }
@@ -68,19 +69,19 @@
             position: relative; 
         }
         .header-title { 
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            font-family: 'Great Vibes'; /* Mobile will use this unless overridden */
-            font-size: 60px;
-            color: white;
-            margin: 0;
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95);
-            text-decoration: none;
-            display: inline-block;
-            padding: 5px 15px;
-            transition: color 0.3s ease;
-            line-height: 1;
+            position: absolute; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            font-family: 'Great Vibes', cursive; 
+            font-size: 60px; 
+            color: white; 
+            margin: 0; 
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95); 
+            text-decoration: none; 
+            display: inline-block; 
+            padding: 5px 15px; 
+            transition: color 0.3s ease; 
+            line-height: 1; 
         }
         .header-title:hover { 
             color: #ccc; 
@@ -111,30 +112,49 @@
             background: #ddd; 
             color: black !important; 
         }
-        .hero-image { 
-            width: 100%; 
-            height: 1200px; 
-            object-fit: cover; 
-            object-position: center; 
-            transition: transform 0.3s ease; 
-            display: block; 
+        .gallery-item { 
+            text-align: center; 
+            position: relative; 
         }
-        .hero-image:hover { 
+        .gallery-item img { 
+            width: 100%; 
+            height: 300px; 
+            object-fit: cover; 
+            transition: transform 0.3s ease; 
+            cursor: pointer; 
+        }
+        .gallery-item img:hover { 
             transform: scale(1.05); 
         }
-        .img-responsive { 
-            transition: transform 0.3s ease; 
-            width: 100%; 
-            height: 400px; 
-            object-fit: cover; 
-            object-position: center; 
+        .gallery-item h3 { 
+            font-size: 20px; 
+            margin: 10px 0; 
         }
-        .img-responsive:hover { 
-            transform: scale(1.05); 
+        .gallery-item p { 
+            font-size: 14px; 
+            color: #666; 
         }
-        article h1 {
-            font-size: 24px;
-            margin: 10px 0;
+        #image-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+        #expanded-image {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        main { 
+            margin-top: 100px; 
         }
         footer .social-icons a {
             margin: 0 10px;
@@ -157,45 +177,36 @@
             .container { padding: 10px; }
             .header-title { font-size: 40px; }
             .callout h5 { font-size: 24px; }
-            .col-sm-6 { width: 100%; }
-            .hero-image { 
-                height: 600px; 
+            .col-sm-6, .col-md-4 { width: 100%; }
+            .gallery-item img { height: 250px; }
+            .gallery-item h3 { font-size: 18px; }
+            .gallery-item p { font-size: 12px; }
+            #expanded-image { max-width: 95%; max-height: 80vh; }
+            header { 
+                padding: 10px 15px 50px 15px; 
+                height: 80px; 
             }
-            .img-responsive { 
-                height: 350px; 
-            }
-            footer { padding: 20px 10px; }
-            header { padding: 10px 15px 50px 15px; height: 80px; }
             .hamburger { font-size: 24px; }
+            main { 
+                margin-top: 80px; 
+            }
             footer .social-icons a { font-size: 16px; }
-            article h1 { font-size: 20px; }
         }
         @media (max-width: 480px) {
             .header-title { font-size: 30px; }
             .callout h5 { font-size: 20px; }
-            .hero-image { 
-                height: 400px; 
+            .gallery-item img { height: 200px; }
+            .gallery-item h3 { font-size: 16px; }
+            .gallery-item p { font-size: 12px; }
+            #expanded-image { max-width: 95%; max-height: 70vh; }
+            header { 
+                padding: 10px 15px 50px 15px; 
             }
-            .img-responsive { 
-                height: 300px; 
-            }
-            article h1 { font-size: 18px; }
-            header { padding: 10px 15px 50px 15px; }
             .hamburger { font-size: 20px; }
+            main { 
+                margin-top: 60px; 
+            }
             footer .social-icons a { font-size: 14px; }
-        }
-        @media (min-width: 769px) {
-            .hero-image { 
-                height: 1200px; 
-            }
-            .img-responsive { 
-                height: 400px; 
-            }
-            article h1 { font-size: 28px; }
-            a.header-title { /* Target <a> specifically on desktop */
-                font-family: 'Great Vibes' !important; /* Adjust this if it's not the desired font */
-                font-size: 60px;
-            }
         }
     </style>
 
@@ -211,6 +222,24 @@
                 }
             });
             $(window).trigger('scroll');
+
+            const overlay = $('<div id="image-overlay"></div>').appendTo('body');
+            const expandedImage = $('<img id="expanded-image">').appendTo(overlay);
+
+            $('.gallery-item img').on('click', function() {
+                const src = $(this).attr('src');
+                const alt = $(this).attr('alt');
+                expandedImage.attr('src', src).attr('alt', alt);
+                overlay.fadeIn(300);
+                $('body').css('overflow', 'hidden');
+            });
+
+            overlay.on('click', function(e) {
+                if (e.target === this || e.target === expandedImage[0]) {
+                    overlay.fadeOut(300);
+                    $('body').css('overflow', 'auto');
+                }
+            });
         });
     </script>
 </head>
@@ -234,60 +263,49 @@
     </header>
     <div>
         <main>
-            <div>
-                <div>
-                    <img src="Softplay1.jpg" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" />
-                </div>
-            </div>
-            <div class="container">
-                <div class="col-xs-12 mg-b-md">
-                    <div class="callout mg-t-lg mg-b-lg">
+            <div class="container mg-t-lg">
+                <div class="col-xs-12">
+                    <div class="callout mg-b-md">
                         <h5>LET’S MAKE YOUR NEXT EVENT ONE TO REMEMBER!</h5>
                     </div>
-                </div>
-                <div class="col-xs-12 mg-b-lg">
-                    <p>At The Hire Room Co, we specialize in transforming your celebrations with high-quality event hire. From soft play setups for little adventurers to thrilling jumping castles, elegant backdrops, cake stands, and stunning balloon garlands, we have everything to make your event unforgettable.</p>
-                    <p>Whether it’s a birthday, wedding, or any special occasion, we’re here to bring your vision to life—effortlessly and beautifully. Based in Lara, Victoria, we proudly serve clients with passion and precision to create magical moments.</p>
+                    <h1>Our Gallery</h1>
+                    <p>Discover a selection of our event hire setups, including soft play, jumping castles, and balloon garlands, crafted to make celebrations unforgettable in Lara, Victoria.</p>
                 </div>
             </div>
-            <div class="container">
-                <section>
-                    <div class="row">
-                        <article class="col-xs-12 col-sm-6">
-                            <div>
-                                <a href="gallery.html">
-                                    <img class="img-responsive" src="Softplay1.jpg" alt="Gallery - Soft Play Setup" />
-                                </a>
-                            </div>
-                            <div>
-                                <h1>GALLERY</h1>
-                            </div>
-                        </article>
-                        <article class="col-xs-12 col-sm-6">
-                            <div>
-                                <a href="services.html">
-                                    <img class="img-responsive" src="Softplay1.jpg" alt="Services - Elegant Backdrop" />
-                                </a>
-                            </div>
-                            <div>
-                                <h1>SERVICES</h1>
-                            </div>
-                        </article>
+            <div class="container mg-b-lg">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Softplay1.jpg" alt="Soft Play Setup">
+                        <h3>Soft Play Setup</h3>
+                        <p>A colorful soft play area for a children’s birthday party in Lara.</p>
                     </div>
-                    <div class="row">
-                        <article class="col-xs-12 col-sm-6">
-                            <div>
-                                <a href="pricing.html">
-                                    <img class="img-responsive" src="custom.jpg" alt="Pricing - Custom Package" />
-                                </a>
-                            </div>
-                            <div>
-                                <h1>PRICING</h1>
-                            </div>
-                        </article>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Jumpingcastle1.jpg" alt="Jumping Castle">
+                        <h3>Jumping Castle</h3>
+                        <p>A vibrant jumping castle for a family event in Geelong.</p>
                     </div>
-                    <div class="clearfix"></div>
-                </section>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Backdrop1.jpg" alt="Balloon Garland Backdrop">
+                        <h3>Balloon Garland Backdrop</h3>
+                        <p>An elegant balloon garland backdrop for a wedding in Ballarat.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Softplay2.jpg" alt="Soft Play Setup">
+                        <h3>Soft Play Setup</h3>
+                        <p>A themed soft play setup for a toddler’s party in Torquay.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Jumpingcastle2.jpg" alt="Jumping Castle">
+                        <h3>Jumping Castle</h3>
+                        <p>A large jumping castle for a community event in Lara.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Backdrop2.jpg" alt="Custom Event Backdrop">
+                        <h3>Custom Event Backdrop</h3>
+                        <p>A bespoke backdrop with balloon accents for a baby shower in Bendigo.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
             </div>
         </main>
     </div>
@@ -298,7 +316,7 @@
                 Email: <a href="mailto:thehireroomco@hotmail.com" style="color: black;">thehireroomco@hotmail.com</a> | Phone: <a href="tel:0406996944" style="color: black;">0406 996 944</a><br>
                 Address: Lara, Vic 3212
                 <div class="social-icons" style="margin-top: 10px;">
-                    <a href="https://www.facebook.com/people/thehireroomco/100090880473042/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.facebook.com/share/18usdgeWSD/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.instagram.com/thehireroomco?igsh=MXIyeTYycXBidG1mNg==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>

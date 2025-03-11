@@ -68,19 +68,22 @@
             position: relative; 
         }
         .header-title { 
-            position: absolute; 
-            left: 50%; 
-            transform: translateX(-50%); 
-            font-family: 'Great Vibes', cursive; 
-            font-size: 60px; 
-            color: white; 
-            margin: 0; 
-            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95); 
-            text-decoration: none; 
-            display: inline-block; 
-            padding: 5px 15px; 
-            transition: color 0.3s ease; 
-            line-height: 1; 
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Great Vibes';
+            font-size: 60px;
+            color: white;
+            margin: 0;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.95);
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 15px;
+            transition: color 0.3s ease;
+            line-height: 1;
+        }
+        a.header-title {
+            font-family: 'Great Vibes' !important; /* Increased specificity to override */
         }
         .header-title:hover { 
             color: #ccc; 
@@ -193,8 +196,8 @@
             }
             article h1 { font-size: 28px; }
             .header-title {
-                font-family: 'Great Vibes', cursive !important; /* Enforce font on desktop */
-                font-size: 60px; /* Matches your original desktop size */
+                font-family: 'Great Vibes' !important;
+                font-size: 60px;
             }
         }
     </style>

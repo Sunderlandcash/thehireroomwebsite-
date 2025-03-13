@@ -1,0 +1,107 @@
+.mg-t-sm { margin-top: 20px; }
+.mg-b-lg { margin-bottom: 40px; }
+.mg-b-md { margin-bottom: 30px; }
+.mg-t-lg { margin-top: 40px; }
+.callout h5 { 
+    font-size: 36px; 
+    margin: 0; 
+}
+.row { margin-left: -15px; margin-right: -15px; }
+.col-xs-12, .col-sm-6 { float: left; padding: 15px; }
+.col-xs-12 { width: 100%; }
+.col-sm-6 { width: 50%; }
+.clearfix { clear: both; }
+.button { display: inline-block; padding: 10px 20px; background: #333; color: #fff; text-decoration: none; }
+.button:hover { background: #555; }
+footer { 
+    background: white; 
+    padding: 30px 20px; 
+    color: black; 
+}
+.header-nav { 
+    float: right; 
+    position: relative; 
+}
+.dropdown-toggle { 
+    background: none; 
+    border: none; 
+    padding: 10px; 
+}
+.hamburger { 
+    font-size: 28px; 
+    color: white; 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.95); 
+    cursor: pointer; 
+}
+.dropdown-menu { 
+    background: white; 
+    position: absolute; 
+    right: 0; 
+    left: auto; 
+    margin-top: 0; 
+    border: none; 
+}
+.dropdown-menu a { 
+    color: black !important; 
+}
+.dropdown-menu a:hover { 
+    background: #ddd; 
+    color: black !important; 
+}
+.hero-image:hover { 
+    transform: scale(1.05); 
+}
+.img-responsive { 
+    transition: transform 0.3s ease; 
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+    object-position: center; 
+}
+.img-responsive:hover { 
+    transform: scale(1.05); 
+}
+article h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+footer .social-icons .fa-facebook-f {
+    color: #3b5998; 
+}
+footer .social-icons .fa-instagram {
+    background: linear-gradient(45deg, #f09433, #e1306c, #c13584); 
+    -webkit-background-clip: text;
+    color: transparent;
+}
+footer .social-icons a:hover {
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+    .container { padding: 10px; }
+    .callout h5 { font-size: 24px; }
+    .col-sm-6 { width: 100%; }
+    .img-responsive { height: 350px; }
+    footer { padding: 20px 10px; }
+    header { padding: 10px 15px 50px 15px; height: 80px; }
+    .hamburger { font-size: 24px; }
+    footer .social-icons a { font-size: 16px; }
+    article h1 { font-size: 20px; }
+}
+@media (max-width: 480px) {
+    .callout h5 { font-size: 20px; }
+    .img-responsive { height: 300px; }
+    article h1 { font-size: 18px; }
+    header { padding: 10px 15px 50px 15px; }
+    .hamburger { font-size: 20px; }
+    footer .social-icons a { font-size: 14px; }
+}
+@media (min-width: 769px) {
+    .img-responsive { height: 400px; }
+    article h1 { font-size: 28px; }
+}

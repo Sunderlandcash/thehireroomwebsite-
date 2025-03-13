@@ -12,7 +12,7 @@
 
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" as="style">
-    <link rel="preload" href="Softplay1.jpg" as="image">
+    <link rel="preload" href="Softplay1.webp" as="image">
 
     <!-- Load Google Fonts with display=swap to prevent FOUT -->
     <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" rel="stylesheet">
@@ -69,21 +69,14 @@
             object-position: center; 
             transition: transform 0.3s ease; 
             display: block; 
-            aspect-ratio: 1200 / 1200; /* Reserve space for the image */
         }
         @media (max-width: 768px) {
             .header-title { font-size: 40px; }
-            .hero-image { 
-                height: 600px; 
-                aspect-ratio: 1200 / 600;
-            }
+            .hero-image { height: 600px; }
         }
         @media (max-width: 480px) {
             .header-title { font-size: 30px; }
-            .hero-image { 
-                height: 400px; 
-                aspect-ratio: 1200 / 400;
-            }
+            .hero-image { height: 400px; }
         }
     </style>
 
@@ -95,8 +88,8 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Load Google Analytics with defer to minimize impact -->
-    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-973QRLQ5D2"></script>
+    <!-- Load Google Analytics asynchronously -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-973QRLQ5D2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -104,10 +97,10 @@
         gtag('config', 'G-973QRLQ5D2');
     </script>
 
-    <!-- Non-critical styles moved to external file -->
+    <!-- Non-critical styles moved to external file (styles.css) -->
     <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 
-    <!-- Add caching headers via meta -->
+    <!-- Add caching headers via meta (if server-side not available) -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
 </head>
 <body>
@@ -132,8 +125,8 @@
         <main>
             <div>
                 <div>
-                    <!-- Hero image: Preload and no lazy loading -->
-                    <img src="Softplay1.jpg" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" width="1200" height="1200" />
+                    <!-- Use WebP format and add lazy-loading -->
+                    <img src="Softplay1.webp" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" loading="lazy" width="1200" height="1200" />
                 </div>
             </div>
             <div class="container">
@@ -153,7 +146,7 @@
                         <article class="col-xs-12 col-sm-6">
                             <div>
                                 <a href="gallery.html">
-                                    <img class="img-responsive" src="Softplay1.jpg" alt="Gallery - Soft Play Setup" loading="lazy" width="600" height="400" />
+                                    <img class="img-responsive" src="Softplay1.webp" alt="Gallery - Soft Play Setup" loading="lazy" width="600" height="400" />
                                 </a>
                             </div>
                             <div>
@@ -163,7 +156,7 @@
                         <article class="col-xs-12 col-sm-6">
                             <div>
                                 <a href="services.html">
-                                    <img class="img-responsive" src="Backdrop1.jpg" alt="Services - Elegant Backdrop" loading="lazy" width="600" height="400" />
+                                    <img class="img-responsive" src="Backdrop1.webp" alt="Services - Elegant Backdrop" loading="lazy" width="600" height="400" />
                                 </a>
                             </div>
                             <div>
@@ -175,7 +168,7 @@
                         <article class="col-xs-12 col-sm-6">
                             <div>
                                 <a href="pricing.html">
-                                    <img class="img-responsive" src="custom.jpg" alt="Pricing - Custom Package" loading="lazy" width="600" height="400" />
+                                    <img class="img-responsive" src="custom.webp" alt="Pricing - Custom Package" loading="lazy" width="600" height="400" />
                                 </a>
                             </div>
                             <div>

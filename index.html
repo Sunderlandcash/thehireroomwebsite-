@@ -88,19 +88,24 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Load Google Analytics asynchronously -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-973QRLQ5D2"></script>
+    <!-- Defer Google Analytics further -->
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-973QRLQ5D2');
+        setTimeout(function() {
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-973QRLQ5D2';
+            script.async = true;
+            document.head.appendChild(script);
+            gtag('js', new Date());
+            gtag('config', 'G-973QRLQ5D2');
+        }, 3000); // Delay loading by 3 seconds
     </script>
 
-    <!-- Non-critical styles moved to external file (styles.css) -->
+    <!-- Non-critical styles -->
     <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
 
-    <!-- Add caching headers via meta (if server-side not available) -->
+    <!-- Add caching headers via meta -->
     <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable">
 </head>
 <body>
@@ -125,8 +130,12 @@
         <main>
             <div>
                 <div>
-                    <!-- Use WebP format and add lazy-loading -->
-                    <img src="Softplay1.webp" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" loading="lazy" width="1200" height="1200" />
+                    <!-- Remove lazy-loading for LCP image and use responsive sizes -->
+                    <picture>
+                        <source media="(max-width: 480px)" srcset="Softplay1-small.webp" width="480" height="400">
+                        <source media="(max-width: 768px)" srcset="Softplay1-medium.webp" width="768" height="600">
+                        <img src="Softplay1.webp" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" width="1200" height="1200" />
+                    </picture>
                 </div>
             </div>
             <div class="container">

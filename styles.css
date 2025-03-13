@@ -57,6 +57,7 @@ footer {
     height: 400px; 
     object-fit: cover; 
     object-position: center; 
+    aspect-ratio: 600 / 400; /* Reserve space for the image */
 }
 .img-responsive:hover { 
     transform: scale(1.05); 
@@ -86,7 +87,10 @@ footer .social-icons a:hover {
     .container { padding: 10px; }
     .callout h5 { font-size: 24px; }
     .col-sm-6 { width: 100%; }
-    .img-responsive { height: 350px; }
+    .img-responsive { 
+        height: 350px; 
+        aspect-ratio: 600 / 350;
+    }
     footer { padding: 20px 10px; }
     header { padding: 10px 15px 50px 15px; height: 80px; }
     .hamburger { font-size: 24px; }
@@ -95,13 +99,19 @@ footer .social-icons a:hover {
 }
 @media (max-width: 480px) {
     .callout h5 { font-size: 20px; }
-    .img-responsive { height: 300px; }
+    .img-responsive { 
+        height: 300px; 
+        aspect-ratio: 600 / 300;
+    }
     article h1 { font-size: 18px; }
     header { padding: 10px 15px 50px 15px; }
     .hamburger { font-size: 20px; }
     footer .social-icons a { font-size: 14px; }
 }
 @media (min-width: 769px) {
-    .img-responsive { height: 400px; }
+    .img-responsive { 
+        height: 400px; 
+        aspect-ratio: 600 / 400;
+    }
     article h1 { font-size: 28px; }
 }

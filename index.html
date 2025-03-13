@@ -12,7 +12,7 @@
 
     <!-- Preload critical resources -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" as="style">
-    <link rel="preload" href="Softplay1.webp" as="image">
+    <link rel="preload" href="Softplay1.jpg" as="image">
 
     <!-- Load Google Fonts with display=swap to prevent FOUT -->
     <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&display=swap" rel="stylesheet">
@@ -125,11 +125,8 @@
         <main>
             <div>
                 <div>
-                    <!-- Use picture element for WebP with JPG fallback -->
-                    <picture>
-                        <source srcset="Softplay1.webp" type="image/webp">
-                        <img src="Softplay1.jpg" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" loading="lazy" width="1200" height="1200" />
-                    </picture>
+                    <!-- Use original JPG with lazy loading -->
+                    <img src="Softplay1.jpg" alt="Soft Play Setup by The Hire Room Co." class="hero-image mg-b-lg" loading="lazy" width="1200" height="1200" />
                 </div>
             </div>
             <div class="container">
@@ -149,10 +146,7 @@
                         <article class="col-xs-12 col-sm-6">
                             <div>
                                 <a href="gallery.html">
-                                    <picture>
-                                        <source srcset="Softplay1.webp" type="image/webp">
-                                        <img class="img-responsive" src="Softplay1.jpg" alt="Gallery - Soft Play Setup" loading="lazy" width="600" height="400" />
-                                    </picture>
+                                    <img class="img-responsive" src="Softplay1.jpg" alt="Gallery - Soft Play Setup" loading="lazy" width="600" height="400" />
                                 </a>
                             </div>
                             <div>
@@ -162,10 +156,7 @@
                         <article class="col-xs-12 col-sm-6">
                             <div>
                                 <a href="services.html">
-                                    <picture>
-                                        <source srcset="Backdrop1.webp" type="image/webp">
-                                        <img class="img-responsive" src="Backdrop1.jpg" alt="Services - Elegant Backdrop" loading="lazy" width="600" height="400" />
-                                    </picture>
+                                    <img class="img-responsive" src="Backdrop1.jpg" alt="Services - Elegant Backdrop" loading="lazy" width="600" height="400" />
                                 </a>
                             </div>
                             <div>
@@ -177,10 +168,7 @@
                         <article class="col-xs-12 col-sm-6">
                             <div>
                                 <a href="pricing.html">
-                                    <picture>
-                                        <source srcset="custom.webp" type="image/webp">
-                                        <img class="img-responsive" src="custom.jpg" alt="Pricing - Custom Package" loading="lazy" width="600" height="400" />
-                                    </picture>
+                                    <img class="img-responsive" src="custom.jpg" alt="Pricing - Custom Package" loading="lazy" width="600" height="400" />
                                 </a>
                             </div>
                             <div>

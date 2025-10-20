@@ -131,37 +131,9 @@
             height: 300px; 
             object-fit: cover; 
             transition: transform 0.3s ease; 
-            cursor: pointer; 
         }
         .gallery-item img:hover { 
             transform: scale(1.05); 
-        }
-        .gallery-item h3 { 
-            font-size: 20px; 
-            margin: 10px 0; 
-        }
-        .gallery-item p { 
-            font-size: 14px; 
-            color: #666; 
-        }
-        #image-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-            overflow: auto;
-        }
-        #expanded-image {
-            max-width: 90%;
-            max-height: 90vh;
-            object-fit: contain;
-            cursor: pointer;
         }
         main { 
             margin-top: 100px; 
@@ -189,9 +161,6 @@
             .callout h5 { font-size: 24px; }
             .col-sm-6, .col-md-4 { width: 100%; }
             .gallery-item img { height: 250px; }
-            .gallery-item h3 { font-size: 18px; }
-            .gallery-item p { font-size: 12px; }
-            #expanded-image { max-width: 95%; max-height: 80vh; }
             header { 
                 padding: 10px 15px 50px 15px; 
                 height: 80px; 
@@ -206,9 +175,6 @@
             .header-title { font-size: 30px; }
             .callout h5 { font-size: 20px; }
             .gallery-item img { height: 200px; }
-            .gallery-item h3 { font-size: 16px; }
-            .gallery-item p { font-size: 12px; }
-            #expanded-image { max-width: 95%; max-height: 70vh; }
             header { 
                 padding: 10px 15px 50px 15px; 
             }
@@ -232,24 +198,6 @@
                 }
             });
             $(window).trigger('scroll');
-
-            const overlay = $('<div id="image-overlay"></div>').appendTo('body');
-            const expandedImage = $('<img id="expanded-image">').appendTo(overlay);
-
-            $('.gallery-item img').on('click', function() {
-                const src = $(this).attr('src');
-                const alt = $(this).attr('alt');
-                expandedImage.attr('src', src).attr('alt', alt);
-                overlay.fadeIn(300);
-                $('body').css('overflow', 'hidden');
-            });
-
-            overlay.on('click', function(e) {
-                if (e.target === this || e.target === expandedImage[0]) {
-                    overlay.fadeOut(300);
-                    $('body').css('overflow', 'auto');
-                }
-            });
         });
     </script>
 </head>
@@ -279,40 +227,111 @@
                         <h5>LET’S MAKE YOUR NEXT EVENT ONE TO REMEMBER!</h5>
                     </div>
                     <h1>Our Gallery</h1>
-                    <p>Discover a selection of our event hire setups, including soft play, jumping castles, and balloon garlands, crafted to make celebrations unforgettable in Geelong, Victoria.</p>
                 </div>
             </div>
             <div class="container mg-b-lg">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Softplay1.jpg" alt="Soft Play Setup">
-                        <h3>Soft Play Setup</h3>
-                        <p>A colorful soft play area for a children’s birthday party in Geelong.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Jumpingcastle1.jpg" alt="Jumping Castle">
-                        <h3>Jumping Castle</h3>
-                        <p>A vibrant jumping castle for a family event in Geelong.</p>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Backdrop1.jpg" alt="Balloon Garland Backdrop">
-                        <h3>Balloon Garland Backdrop</h3>
-                        <p>An elegant balloon garland backdrop for a wedding in Ballarat.</p>
+                        <img src="pic14.jpg" alt="Gallery Image 14">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
                         <img src="Softplay2.jpg" alt="Soft Play Setup">
-                        <h3>Soft Play Setup</h3>
-                        <p>A themed soft play setup for a toddler’s party in Torquay.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic7.jpg" alt="Gallery Image 7">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic22.jpg" alt="Gallery Image 22">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Jumpingcastle1.jpg" alt="Jumping Castle">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic3.jpg" alt="Gallery Image 3">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic19.jpg" alt="Gallery Image 19">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Backdrop1.jpg" alt="Balloon Garland Backdrop">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic11.jpg" alt="Gallery Image 11">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic25.jpg" alt="Gallery Image 25">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="Softplay1.jpg" alt="Soft Play Setup">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic8.jpg" alt="Gallery Image 8">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic16.jpg" alt="Gallery Image 16">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
                         <img src="Jumpingcastle2.jpg" alt="Jumping Castle">
-                        <h3>Jumping Castle</h3>
-                        <p>A large jumping castle for a community event in Geelong.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic1.jpg" alt="Gallery Image 1">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic27.jpg" alt="Gallery Image 27">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic12.jpg" alt="Gallery Image 12">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic4.jpg" alt="Gallery Image 4">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
                         <img src="Backdrop2.jpg" alt="Custom Event Backdrop">
-                        <h3>Custom Event Backdrop</h3>
-                        <p>A bespoke backdrop with balloon accents for a baby shower in Bendigo.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic20.jpg" alt="Gallery Image 20">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic9.jpg" alt="Gallery Image 9">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic15.jpg" alt="Gallery Image 15">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic2.jpg" alt="Gallery Image 2">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic26.jpg" alt="Gallery Image 26">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic17.jpg" alt="Gallery Image 17">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic5.jpg" alt="Gallery Image 5">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic23.jpg" alt="Gallery Image 23">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic13.jpg" alt="Gallery Image 13">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic28.jpg" alt="Gallery Image 28">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic10.jpg" alt="Gallery Image 10">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic21.jpg" alt="Gallery Image 21">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic6.jpg" alt="Gallery Image 6">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic18.jpg" alt="Gallery Image 18">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
+                        <img src="pic24.jpg" alt="Gallery Image 24">
                     </div>
                 </div>
                 <div class="clearfix"></div>

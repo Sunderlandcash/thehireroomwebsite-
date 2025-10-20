@@ -127,13 +127,10 @@
             position: relative; 
         }
         .gallery-item img { 
-            width: 100%; 
-            height: 300px; 
-            object-fit: cover; 
-            transition: transform 0.3s ease; 
-        }
-        .gallery-item img:hover { 
-            transform: scale(1.05); 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+            margin: 0 auto; 
         }
         main { 
             margin-top: 100px; 
@@ -160,7 +157,7 @@
             .header-title { font-size: 40px; }
             .callout h5 { font-size: 24px; }
             .col-sm-6, .col-md-4 { width: 100%; }
-            .gallery-item img { height: 250px; }
+            .gallery-item img { max-width: 100%; height: auto; }
             header { 
                 padding: 10px 15px 50px 15px; 
                 height: 80px; 
@@ -174,7 +171,7 @@
         @media (max-width: 480px) {
             .header-title { font-size: 30px; }
             .callout h5 { font-size: 20px; }
-            .gallery-item img { height: 200px; }
+            .gallery-item img { max-width: 100%; height: auto; }
             header { 
                 padding: 10px 15px 50px 15px; 
             }
@@ -232,106 +229,106 @@
             <div class="container mg-b-lg">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic14.jpeg" alt="Gallery Image 14">
+                        <img src="pic14.jpeg" alt="Gallery Image 14" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Softplay2.jpg" alt="Soft Play Setup">
+                        <img src="Softplay2.jpg" alt="Soft Play Setup" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic7.jpeg" alt="Gallery Image 7">
+                        <img src="pic7.jpeg" alt="Gallery Image 7" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic22.jpeg" alt="Gallery Image 22">
+                        <img src="pic22.jpeg" alt="Gallery Image 22" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Jumpingcastle1.jpg" alt="Jumping Castle">
+                        <img src="Jumpingcastle1.jpg" alt="Jumping Castle" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic3.jpeg" alt="Gallery Image 3">
+                        <img src="pic3.jpeg" alt="Gallery Image 3" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic19.jpeg" alt="Gallery Image 19">
+                        <img src="pic19.jpeg" alt="Gallery Image 19" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Backdrop1.jpg" alt="Balloon Garland Backdrop">
+                        <img src="Backdrop1.jpg" alt="Balloon Garland Backdrop" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic11.jpeg" alt="Gallery Image 11">
+                        <img src="pic11.jpeg" alt="Gallery Image 11" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic25.jpeg" alt="Gallery Image 25">
+                        <img src="pic25.jpeg" alt="Gallery Image 25" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Softplay1.jpg" alt="Soft Play Setup">
+                        <img src="Softplay1.jpg" alt="Soft Play Setup" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic8.jpeg" alt="Gallery Image 8">
+                        <img src="pic8.jpeg" alt="Gallery Image 8" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic16.jpeg" alt="Gallery Image 16">
+                        <img src="pic16.jpeg" alt="Gallery Image 16" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Jumpingcastle2.jpg" alt="Jumping Castle">
+                        <img src="Jumpingcastle2.jpg" alt="Jumping Castle" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic1.jpeg" alt="Gallery Image 1">
+                        <img src="pic1.jpeg" alt="Gallery Image 1" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic27.jpeg" alt="Gallery Image 27">
+                        <img src="pic27.jpeg" alt="Gallery Image 27" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic12.jpeg" alt="Gallery Image 12">
+                        <img src="pic12.jpeg" alt="Gallery Image 12" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic4.jpeg" alt="Gallery Image 4">
+                        <img src="pic4.jpeg" alt="Gallery Image 4" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="Backdrop2.jpg" alt="Custom Event Backdrop">
+                        <img src="Backdrop2.jpg" alt="Custom Event Backdrop" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic20.jpeg" alt="Gallery Image 20">
+                        <img src="pic20.jpeg" alt="Gallery Image 20" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic9.jpeg" alt="Gallery Image 9">
+                        <img src="pic9.jpeg" alt="Gallery Image 9" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic15.jpeg" alt="Gallery Image 15">
+                        <img src="pic15.jpeg" alt="Gallery Image 15" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic2.jpeg" alt="Gallery Image 2">
+                        <img src="pic2.jpeg" alt="Gallery Image 2" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic26.jpeg" alt="Gallery Image 26">
+                        <img src="pic26.jpeg" alt="Gallery Image 26" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic17.jpeg" alt="Gallery Image 17">
+                        <img src="pic17.jpeg" alt="Gallery Image 17" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic5.jpeg" alt="Gallery Image 5">
+                        <img src="pic5.jpeg" alt="Gallery Image 5" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic23.jpeg" alt="Gallery Image 23">
+                        <img src="pic23.jpeg" alt="Gallery Image 23" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic13.jpeg" alt="Gallery Image 13">
+                        <img src="pic13.jpeg" alt="Gallery Image 13" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic28.jpeg" alt="Gallery Image 28">
+                        <img src="pic28.jpeg" alt="Gallery Image 28" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic10.jpeg" alt="Gallery Image 10">
+                        <img src="pic10.jpeg" alt="Gallery Image 10" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic21.jpeg" alt="Gallery Image 21">
+                        <img src="pic21.jpeg" alt="Gallery Image 21" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic6.jpeg" alt="Gallery Image 6">
+                        <img src="pic6.jpeg" alt="Gallery Image 6" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic18.jpeg" alt="Gallery Image 18">
+                        <img src="pic18.jpeg" alt="Gallery Image 18" loading="lazy">
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4 gallery-item">
-                        <img src="pic24.jpeg" alt="Gallery Image 24">
+                        <img src="pic24.jpeg" alt="Gallery Image 24" loading="lazy">
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -353,4 +350,5 @@
     </footer>
 </body>
 </html>
+
 
